@@ -26,13 +26,13 @@ if(isset($_POST["old_Id"]) && isset($_POST["new_Id"])){
 	}
 
 	if($ck == $old){
-		//means success so updating
+		//significa que se actualizó exitosamente
 		$sql = mysqli_query($connect, "UPDATE user SET password = '$newID' WHERE id='$id' and password = '$old' ");
 		$msg = "<div align='center'><font color='green'>Successfully Changed</font></div>";
 		
 	}
 	else{
-		//means some error occured
+		//indica que algún error ocurrió
 		$msg = "<div align='center'><font color='red'>Sorry Wrong Old Password, try again</font></div>";
 	}
 
